@@ -17,7 +17,6 @@ class SPRITE_CLOUD_OT_mark_sprite(Operator):
 
     def execute(self, context):
         SpriteCloud.mark_sprite(
-            context=context,
             objects=context.selected_objects
         )
         return {'FINISHED'}
@@ -34,8 +33,7 @@ class SPRITE_CLOUD_OT_remove_from_sprites(Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     def execute(self, context):
-        SpriteCloud.remove_from_sprite(
-            context=context,
+        SpriteCloud.remove_from_sprites(
             objects=context.selected_objects
         )
         return {'FINISHED'}

@@ -4,10 +4,13 @@
 # GitHub
 #    https://github.com/Korchy/blender_sprite_cloud/
 
+import bpy
+from bpy.app.handlers import persistent
 from . import sprite_cloud_props
 from . import sprite_cloud_ops
 from . import sprite_cloud_ui
 from .addon import Addon
+from .sprite_cloud import SpriteCloud
 
 
 bl_info = {
@@ -23,11 +26,24 @@ bl_info = {
 }
 
 
+@persistent
+def sprite_cloud_register():
+    # register sprite cloud
+    if bpy.context and hasattr(bpy.context, 'scene'):
+        SpriteCloud.register(context=bpy.context)
+    else:
+        return 0.25
+
+
 def register():
     if not Addon.dev_mode():
         sprite_cloud_props.register()
         sprite_cloud_ops.register()
         sprite_cloud_ui.register()
+        bpy.app.timers.register(
+            function=sprite_cloud_register,
+            first_interval=0.25
+        )
     else:
         print('It seems you are trying to use the dev version of the '
            + bl_info['name']
@@ -36,6 +52,7 @@ def register():
 
 def unregister():
     if not Addon.dev_mode():
+        SpriteCloud.unregister()
         sprite_cloud_ui.unregister()
         sprite_cloud_ops.unregister()
         sprite_cloud_props.unregister()
