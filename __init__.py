@@ -12,7 +12,6 @@ from . import sprite_cloud_ui
 from .addon import Addon
 from .sprite_cloud import SpriteCloud
 
-
 bl_info = {
     'name': 'sprite_cloud',
     'category': 'All',
@@ -20,8 +19,8 @@ bl_info = {
     'version': (1, 0, 0),
     'blender': (2, 93, 0),
     'location': '3D Viewport - N panel - SpCl tab',
-    'doc_url': 'https://b3d.interplanety.org/en/',
-    'tracker_url': 'https://b3d.interplanety.org/en/',
+    'doc_url': 'https://b3d.interplanety.org/en/blender-add-on-sprite-cloud/',
+    'tracker_url': 'https://b3d.interplanety.org/en/blender-add-on-sprite-cloud/',
     'description': 'Simple managing sprites'
 }
 
@@ -46,8 +45,8 @@ def register():
         )
     else:
         print('It seems you are trying to use the dev version of the '
-           + bl_info['name']
-           + ' add-on. It may work not properly. Please download and use the release version')
+              + bl_info['name']
+              + ' add-on. It may work not properly. Please download and use the release version')
 
 
 def unregister():

@@ -86,7 +86,6 @@ class SpriteCloud:
                 sprite=sprite
             )
             if track_to_constraint:
-                print('change target', new_target)
                 track_to_constraint.target = new_target
 
     @classmethod

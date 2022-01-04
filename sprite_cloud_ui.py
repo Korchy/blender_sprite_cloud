@@ -22,7 +22,7 @@ class SPRITE_CLOUD_PT_panel(Panel):
         )
         self.layout.operator(
             operator='sprite_cloud.remove_from_sprites',
-            icon='CANCEL'
+            icon='UNLINKED'
         )
 
 
