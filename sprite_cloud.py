@@ -54,6 +54,7 @@ class SpriteCloud:
             constraint = obj.constraints.new(type='TRACK_TO')
             constraint.target = context.scene.camera
             constraint.name = cls.track_constraint_name
+            constraint.track_axis = 'TRACK_Z'
 
     @classmethod
     def clear_track_to_camera(cls, obj):

@@ -17,11 +17,11 @@ More on https://b3d.interplanety.org/en/blender-add-on-sprite-cloud/
 
 Current add-on version
 -
-1.0.0.
+1.0.1.
 
 Blender versions
 -
-2.93, 3.0, 3.1
+2.93, 3.0, 3.1, 3.2
 
 Location and call
 -
@@ -34,5 +34,8 @@ Installation
 
 Version history
 -
+1.0.1.
+- Fixed issue with mirroring sprites
+
 1.0.0.
 - Release.

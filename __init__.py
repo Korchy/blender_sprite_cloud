@@ -16,7 +16,7 @@ bl_info = {
     'name': 'sprite_cloud',
     'category': 'All',
     'author': 'Nikita Akimov',
-    'version': (1, 0, 0),
+    'version': (1, 0, 1),
     'blender': (2, 93, 0),
     'location': '3D Viewport - N panel - SpCl tab',
     'doc_url': 'https://b3d.interplanety.org/en/blender-add-on-sprite-cloud/',
